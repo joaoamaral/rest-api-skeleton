@@ -1,13 +1,10 @@
-var express = require('express');
+var express = require('express'),
+    books = require('./books');
 
 var app = express();
 
-app.get('/books', function(req, res) {
-    res.send([{name:'book1'}, {name:'book2'}]);
-});
-app.get('/books/:id', function(req, res) {
-    res.send({id:req.params.id, name: "The Name", author: "unknown"});
-});
+app.get('/books', books.findAll);
+app.get('/books/:id', books.findById);
 
 app.listen(3000);
 console.log('Listening on port 3000...');
