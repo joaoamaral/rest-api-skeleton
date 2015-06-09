@@ -1,13 +1,16 @@
-var express = require('express'),
-    book = require('./books');
+var app = require('express')();
+var bodyParser = require('body-parser');
+var book = require('./books');
 
-var app = express();
+app.use(bodyParser.json());
 
 app.get('/books', book.findAll);
 app.get('/books/:id', book.findById);
-app.post('/books', book.addBook);
+
 app.put('/books/:id', book.updateBook);
 app.delete('/books/:id', book.deleteBook);
+
+app.post('/books', book.addBook);
 
 app.listen(3000);
 console.log('Listening on port 3000...');

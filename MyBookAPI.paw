@@ -72,14 +72,14 @@
     </object>
     <object type="LMREQUEST" id="z103">
         <attribute name="uuid" type="string">7B98D7FB-1E2E-4A14-BE19-360FE2F1CEF5</attribute>
-        <attribute name="url" type="string">http://localhost:3000/books/5576366e88a9418cd5eb8e73</attribute>
+        <attribute name="url" type="string">http://localhost:3000/books/557676a7ac6d2d0bde8c7abc</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
         <attribute name="redirectauthorization" type="bool">0</attribute>
         <attribute name="method" type="string">DELETE</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
-        <attribute name="order" type="int64">3</attribute>
+        <attribute name="order" type="int64">2</attribute>
         <attribute name="name" type="string">My API - Delete by Id</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
@@ -123,7 +123,7 @@
     </object>
     <object type="LMREQUEST" id="z109">
         <attribute name="uuid" type="string">793D5F70-B023-4767-88F3-AED5F4283557</attribute>
-        <attribute name="url" type="string">http://localhost:3000/books/557635ab88a9418cd5eb8e70</attribute>
+        <attribute name="url" type="string">http://localhost:3000/books/5576374488a9418cd5eb8e75</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -138,14 +138,14 @@
     </object>
     <object type="LMREQUEST" id="z110">
         <attribute name="uuid" type="string">51088598-C9D4-450F-B9F7-B37313A56021</attribute>
-        <attribute name="url" type="string">http://localhost:3000/books/557636c988a9418cd5eb8e74</attribute>
-        <attribute name="storecookies" type="bool">1</attribute>
-        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="url" type="string">http://localhost:3000/books/55767ab454e59661ded788c7</attribute>
+        <attribute name="storecookies" type="bool">0</attribute>
+        <attribute name="sendcookies" type="bool">0</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
         <attribute name="redirectauthorization" type="bool">0</attribute>
         <attribute name="method" type="string">PUT</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
-        <attribute name="body" type="string">[{"data":{"json":"{\\"_id\\":\\"557636c988a9418cd5eb8e74\\",\\"name\\":\\"Being Human\\",\\"published\\":\\"Jun 9, 2017\\",\\"author\\":\\"Jo\\\\u00e3o Amaral\\",\\"cover\\":\\"\\"}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
+        <attribute name="body" type="string">[{"data":{"json":"{\\"name\\":\\"Being Human\\",\\"published\\":\\"Jun 9, 2017\\",\\"author\\":\\"João Amaral\\",\\"cover\\":\\"nothing.jpg\\"}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
         <attribute name="order" type="int64">4</attribute>
         <attribute name="name" type="string">My API - Update (Put)</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
@@ -192,7 +192,7 @@
         <attribute name="method" type="string">POST</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
         <attribute name="body" type="string">[{"data":{"json":"{\\"name\\":\\"Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration\\",\\"published\\":\\"April 8, 2014\\",\\"author\\":\\"Amy Wallace and Edwin Catmull\\",\\"cover\\":\\"creativity_inc.jpg\\"}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
-        <attribute name="order" type="int64">2</attribute>
+        <attribute name="order" type="int64">3</attribute>
         <attribute name="name" type="string">My API - Post</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>

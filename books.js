@@ -19,16 +19,6 @@ db.open(function(err, db) {
     }
 });
 
-exports.findById = function(req, res) {
-    var id = req.params.id;
-    console.log('Retrieving book: ' + id);
-    db.collection('books', function(err, collection) {
-        collection.findOne({'_id':new ObjectID(id)}, function(err, item) {
-            res.send(item);
-        });
-    });
-};
-
 exports.findAll = function(req, res) {
     db.collection('books', function(err, collection) {
         collection.find().toArray(function(err, items) {
@@ -38,10 +28,14 @@ exports.findAll = function(req, res) {
 };
 
 exports.addBook = function(req, res) {
+  console.log("REQ")
+  console.log(req)
+
     var book = req.body;
     console.log('Adding book: ' + JSON.stringify(book));
+
     db.collection('books', function(err, collection) {
-        collection.insert(req.body, {safe:true}, function(err, result) {
+        collection.insert(book, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
             } else {
@@ -50,9 +44,11 @@ exports.addBook = function(req, res) {
             }
         });
     });
-}
+};
 
 exports.updateBook = function(req, res) {
+  console.log("REQ")
+  console.log(req)
     var id = req.params.id;
     var book = req.body;
     console.log('Updating book: ' + id);
@@ -69,6 +65,16 @@ exports.updateBook = function(req, res) {
         });
     });
 }
+
+exports.findById = function(req, res) {
+    var id = req.params.id;
+    console.log('Retrieving book: ' + id);
+    db.collection('books', function(err, collection) {
+        collection.findOne({'_id':new ObjectID(id)}, function(err, item) {
+            res.send(item);
+        });
+    });
+};
 
 exports.deleteBook = function(req, res) {
     var id = req.params.id;
