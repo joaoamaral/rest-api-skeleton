@@ -1,6 +1,13 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(3000, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:3000/');
+var express = require('express');
+
+var app = express();
+
+app.get('/books', function(req, res) {
+    res.send([{name:'book1'}, {name:'book2'}]);
+});
+app.get('/books/:id', function(req, res) {
+    res.send({id:req.params.id, name: "The Name", author: "unknown"});
+});
+
+app.listen(3000);
+console.log('Listening on port 3000...');
